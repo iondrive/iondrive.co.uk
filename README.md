@@ -1,6 +1,6 @@
 # iondrive.co.uk
 
-The Ion Drive Software website. This is the content branch.
+The Ion Drive Software website.
 
 See [here](https://help.github.com/articles/using-jekyll-with-pages/) on how to setup Jekyll.
 
