@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Meta Naming -->
+    <title>Ion Drive Software Solutions</title>
+    <meta property="og:title" content="Ion Drive Software Solutions" />
+    <meta name="twitter:title" content="Ion Drive Software Solutions" />
+
+    <!-- Meta Descriptions -->
+    <meta name="description" content="CHANGE ME">
+    <meta property="og:description" content="CHANGE ME" />
+    <meta name="twitter:description" content="CHANGE ME" />
+
+    <!-- Social Names -->
+    <meta name="application-name" content="" />
+    <meta property="og:site_name" content="" />
+
+    <!-- Meta Images -->
+    <link rel="apple-touch-icon-precomposed" href="/images/meta/touch-icon.png" />
+    <meta property="og:image" content="http://iondrive.co.uk/images/meta/meta-logo.png" />
+    <meta name="twitter:image" content="http://iondrive.co.uk/images/meta/meta-logo.png" />
+    <meta name="msapplication-config" content="http://iondrive.co.uk/browserconfig.xml" />
+
+    <link rel="icon" type="image/png" href="/images/meta/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/meta/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/images/meta/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/meta/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/meta/favicon-16x16.png" sizes="16x16">
+
+    <!-- Social URLs -->
+    <meta property="og:url" content="http://iondrive.co.uk/showcase/" />
+    <meta name="twitter:url" content="http://iondrive.co.uk/showcase/" />
+
+    <!-- Other Meta Stuff -->
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="robots" content="all" />
+    <meta name="author" content="Root Studio" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="1 Month" />
+    <meta name="keywords" content="" />
+
+    <!-- Device Settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!--[if gte IE 9]><!-->
+    <link rel="stylesheet" media="screen" href="/css/main.css" />
+    <!--<![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" media="screen" href="/css/main-ie.css" />
+    <![endif]-->
+</head>
+
+<body id="csstyle">
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="wrapper">
+
+            <!-- Logo -->
+            <h1 class="logo-container">
+          <a href="/" class="ion-logo">Ion Drive Software Solutions</a>
+        </h1>
+            <!-- ./Logo -->
+
+            <!-- Primary Nav -->
+            <nav class="nav-tabs">
+                <a href="/" class="nav-tab{% if page.title == 'index' %} --active{% endif %}">What we do</a>
+                <a href="/#about-us" class="nav-tab">About us</a>
+                <a href="/#approach" class="nav-tab">Our approach</a>
+                <a href="/showcase/" class="nav-tab{% if page.title == 'showcase' %} --active{% endif %}">Showcase</a>
+                <a href="/contact/" class="nav-tab{% if page.title == 'contact' %} --active{% endif %}">Contact</a>
+            </nav>
+
+            <a href="#menu" class="nav-toggle">&#9776;</a>
+            <!-- ./Primary Nav -->
+
+        </div>
+    </header>
+    <!-- ./Site Header -->
+
+    <!-- Page -->
+    <div class="page">
+        {{ content }}
+    </div>
+    <!-- ./Page -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <strong class="copyright">© 2015 ion drive software - software and app development, Lincoln</strong>
+            <span class="contact-point"><span class="contact-point__label">Email:</span> <a href="mailto:contact@iondrive.co.uk">contact@iondrive.co.uk</a></span>
+            <span class="contact-point"><span class="contact-point__label">Telephone:</span> 01522 837220</span>
+        </div>
+    </footer>
+    <!-- ./Footer -->
+
+    <script src="/js/site.min.js"></script>
+    <script src="/js/gridset-overlay.js"></script>
+    <script src="//use.typekit.net/ith2gkn.js"></script>
+    <script>
+    try {
+        Typekit.load();
+    } catch (e) {}
+    </script>
+    {% if page.include_scroll %}{% include scroll.html %}{% endif %}
+    {% if page.include_map %}{% include map.html %}{% endif %}
+</body>
+
+</html>

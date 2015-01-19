@@ -1,0 +1,15 @@
+<script>
+(function($) {
+    $(document).ready(function() {
+
+        $('.nav-tab').on('click', function(e) {
+            if ($(this).attr("href").match("#")) {
+                e.preventDefault();
+                var href = $(this).attr('href').replace('/#', '')
+                ION.Components.Menu.scrollToAnchor(href);
+            }
+        });
+
+    });
+})(jQuery);
+</script>

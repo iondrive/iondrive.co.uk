@@ -1,0 +1,9 @@
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+gems:
+  - jekyll-sitemap

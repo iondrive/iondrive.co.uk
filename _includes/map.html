@@ -1,0 +1,125 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVoOSfqu3hPsfbKJxENpw12wPwNaodePw&amp;sensor=false"></script>
+<script>
+var mapStyle = [{
+    "featureType": "landscape",
+    "stylers": [{
+        "hue": "#22303A"
+    }, {
+        "saturation": 6.800000000000011
+    }, {
+        "lightness": 26
+    }, {
+        "gamma": 1
+    }]
+}, {
+    "featureType": "road.highway",
+    "stylers": [{
+        "hue": "#22303A"
+    }, {
+        "saturation": -70.6
+    }, {
+        "lightness": 20.599999999999994
+    }, {
+        "gamma": 1
+    }]
+}, {
+    "featureType": "road.arterial",
+    "stylers": [{
+        "hue": "#22303A"
+    }, {
+        "saturation": -55.6
+    }, {
+        "lightness": 31
+    }, {
+        "gamma": 1
+    }]
+}, {
+    "featureType": "road.local",
+    "stylers": [{
+        "hue": "#22303A"
+    }, {
+        "saturation": -67
+    }, {
+        "lightness": 51.599999999999994
+    }, {
+        "gamma": 1
+    }]
+}, {
+    "featureType": "water",
+    "stylers": [{
+        "hue": "#22303A"
+    }, {
+        "saturation": 22.39999999999999
+    }, {
+        "lightness": 31.80000000000001
+    }, {
+        "gamma": 1
+    }]
+}, {
+    "featureType": "poi",
+    "stylers": [{
+        "hue": "#22303A"
+    }, {
+        "saturation": -8.200000000000003
+    }, {
+        "lightness": 6.200000000000003
+    }, {
+        "gamma": 1
+    }]
+}];
+
+function mapInit() {
+    //$("#map_canvas").height($(".image-bg").height());
+    var mapcenter = new google.maps.LatLng(53.22637, -0.545545);
+    var mapOptions = {
+        zoom: 14,
+        center: mapcenter,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: false,
+        styles: mapStyle
+    };
+
+    mapOptions.mapTypeControl = true;
+    mapOptions.mapTypeControlOptions = {
+        style: google.maps.MapTypeControlStyle.DEFAULT
+    };
+
+
+    mapOptions.scaleControl = true;
+    mapOptions.zoomControlOptions = {
+        style: google.maps.ZoomControlStyle.DEFAULT
+    };
+
+
+    mapOptions.overviewMapControl = true;
+    mapOptions.scaleControl = true;
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    //map.panBy(0, -50);
+
+    // Marker
+    var image = new google.maps.MarkerImage('/images/icons/marker.png',
+        new google.maps.Size(64, 77),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(15, 77)
+    );
+
+    //var latlng = new google.maps.LatLng(52.931242,-0.157778);
+    var marker = new google.maps.Marker({
+        position: mapcenter,
+        map: map,
+        draggable: false,
+        icon: image,
+        optimized: false
+    });
+
+    var info = new google.maps.InfoWindow({
+        content: '<div><p><b>ION Drive Software,</b><br />Sparkhouse Studios, <br />Ropewalk, <br />Lincoln, <br />LN6 7DQ.</p></div>'
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+        info.open(map, marker);
+    });
+    //info.open(map,marker);
+}
+google.maps.event.addDomListener(window, 'load', mapInit);
+</script>
